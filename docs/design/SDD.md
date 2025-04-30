@@ -13,6 +13,9 @@ The application stack is as follows:
 ## Database
 [*PostgreSQL*](https://www.postgresql.org/) will be used for the database due to its wide adoption in modern industry and useful features. 
 
+### Security
+Passwords will be encrypted using the [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) algorithm. Passwords will be hashed with a salt directly in postgresql. This comes with the advantage of the salt being automatically stored. All password hash comparisons will be performed on the database side as well. 
+
 ## Backend
 [*NodeJS*](https://nodejs.org/en) will be used for the backend API, due to its relative simplicity. The following will be used for the backend:
 
@@ -41,6 +44,9 @@ The frontend will use the [React](https://react.dev/) framework. The following i
 
 ### Linting and Type Safety
 Like with the [backend](#linting-and-type-safety), ESLint and Typescript will be used. The frontend will use the [ESLint React Plugin](https://github.com/jsx-eslint/eslint-plugin-react) to extend ESLint.
+
+### Authorization
+[JSON Web Tokens (JWT)](https://jwt.io/introduction) will be used for authorization.
 
 ## CI/CD
 
